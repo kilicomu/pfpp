@@ -36,7 +36,9 @@ def computation_time(
     Returns:
         float:                 The total computation time in seconds.
     """
-    return setup_time + (compute_time / n_processing_elements) + finalization_time
+    return (
+        setup_time + (compute_time / n_processing_elements) + finalization_time
+    )
 
 
 # ------------------------------------------------------------------------------
