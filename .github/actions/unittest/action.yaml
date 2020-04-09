@@ -1,10 +1,12 @@
 name: 'Unittest'
 description: 'Run package unit tests with unittest'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
 inputs:
   tests_root:
     description: 'Root directory for project unit tests'
     required: false
     default: 'tests'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '${{ inputs.tests_root }}'
